@@ -5,21 +5,15 @@
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![Level](https://img.shields.io/badge/Level-Intermediate-orange)
 
-End-to-end retail analytics project using SQL — focused on data cleaning, transformation, and generating business insights.
+End-to-end retail analytics project using SQL — focused on cleaning raw data, transforming it, and extracting business insights.
 
 ---
 
 ## 📊 Project Overview
 
-This project simulates a real-world retail analytics scenario where raw transactional data is processed and analysed to extract meaningful insights.
+This project simulates a real-world retail business scenario where raw transactional data is converted into meaningful insights.
 
-It covers the complete workflow:
-• Data cleaning
-• Data correction
-• Data transformation
-• Exploratory analysis
-• Customer behaviour analysis
-• Segmentation
+Instead of just writing queries, the focus is on solving business problems through structured data analysis.
 
 ---
 
@@ -32,7 +26,7 @@ Retail businesses often struggle with:
 • Lack of customer insights
 • Poor segmentation strategies
 
-This project solves these using structured SQL queries.
+This project addresses these issues using SQL-driven analysis.
 
 ---
 
@@ -40,9 +34,9 @@ This project solves these using structured SQL queries.
 
 The project uses three datasets:
 
-• customer_profiles → Customer demographics
-• product_inventory → Product details & pricing
-• sales_transaction → Transaction-level data
+• `customer_profiles` → Customer demographics
+• `product_inventory` → Product details & pricing
+• `sales_transaction` → Transaction-level data
 
 ---
 
@@ -75,7 +69,7 @@ Retail-Analytics-SQL-Project/
 ### 🧹 Data Cleaning
 
 • Removed duplicate transaction records
-• Handled NULL values using appropriate defaults
+• Handled NULL, empty, and whitespace values
 
 ### 🔧 Data Correction
 
@@ -85,32 +79,31 @@ Retail-Analytics-SQL-Project/
 ### 🔄 Data Transformation
 
 • Converted transaction dates into proper DATE format
-• Enabled time-based analysis
+• Prepared data for time-based analysis
 
 ### 📈 Exploratory Analysis
 
 • Product-wise and category-wise sales
-• Daily transaction trends
-• Monthly growth (using window functions)
+• Daily and monthly transaction trends
+• Growth analysis using window functions
 
 ### 👥 Customer Analysis
 
-• High-value customers
-• Low-engagement users
-• Repeat purchase patterns
-• Customer lifecycle
+• Identified high-value customers
+• Analysed repeat purchase behaviour
+• Evaluated customer engagement
 
 ### 🎯 Customer Segmentation
 
 • Segmented customers into Low, Medium, High
-• Based on purchase quantity
+• Based on purchase behaviour and quantity
 
 ---
 
 ## 📌 Key Insights
 
-• A small segment of customers drives most revenue
-• Top products significantly impact total sales
+• A small segment of customers drives most of the revenue
+• Top-performing products significantly impact total sales
 • Repeat buyers indicate strong retention
 • Monthly trends reveal business seasonality
 
@@ -130,29 +123,29 @@ Retail-Analytics-SQL-Project/
 2. Rename tables if needed
 3. Run SQL scripts in order:
 
-```sql
-01_data_cleaning.sql  
-02_data_correction.sql  
-03_data_transformation.sql  
-04_exploratory_analysis.sql  
-05_customer_analysis.sql  
-06_segmentation.sql  
-```
+* [01_data_cleaning.sql](sql/01_data_cleaning.sql)
+* [02_data_correction.sql](sql/02_data_correction.sql)
+* [03_data_transformation.sql](sql/03_data_transformation.sql)
+* [04_exploratory_analysis.sql](sql/04_exploratory_analysis.sql)
+* [05_customer_analysis.sql](sql/05_customer_analysis.sql)
+* [06_segmentation.sql](sql/06_segmentation.sql)
 
 ---
 
 ## 🚀 Why This Project Matters
 
 This project demonstrates:
+
 • Real-world problem solving using SQL
 • Strong data cleaning and transformation skills
 • Business-focused analytical thinking
+• Ability to convert raw data into actionable insights
 
 ---
 
 ## 👤 Author
 
-**Sourav Mukherjee**
+Sourav Mukherjee
 Aspiring Data Analyst | SQL • Power BI • Python
 
 ---

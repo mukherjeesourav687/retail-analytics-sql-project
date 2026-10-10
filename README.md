@@ -1,159 +1,49 @@
-# 🛒 Retail Analytics SQL Project
+# Retail Analytics with SQL
 
-![SQL](https://img.shields.io/badge/SQL-MySQL-blue)
-![Project Type](https://img.shields.io/badge/Project-Data%20Analytics-green)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
-![Level](https://img.shields.io/badge/Level-Intermediate-orange)
+A MySQL portfolio project exploring how customer, inventory, and transaction data can support retail decisions.
 
-End-to-end retail analytics project using SQL — focused on cleaning raw data, transforming it, and extracting business insights.
+## Business questions
 
----
+- Which products and categories generate the most sales?
+- How do sales change over time?
+- Which customers purchase repeatedly or spend more?
+- How can purchase behaviour support customer segmentation?
 
-## 📊 Project Overview
+## Start here
 
-This project simulates a real-world retail business scenario where raw transactional data is converted into meaningful insights.
+| Stage | Source | Focus |
+|---|---|---|
+| 1 | [Data cleaning](sql/01_data_cleaning.sql) | Duplicates and missing values |
+| 2 | [Data correction](sql/02_data_correction.sql) | Transaction and inventory price consistency |
+| 3 | [Transformation](sql/03_data_transformation.sql) | Date preparation |
+| 4 | [Exploratory analysis](sql/04_exploratory_analysis.sql) | Product, category, and time trends |
+| 5 | [Customer analysis](sql/05_customer_analysis.sql) | Spending and repeat purchases |
+| 6 | [Segmentation](sql/06_segmentation.sql) | Purchase-based customer groups |
 
-Instead of just writing queries, the focus is on solving business problems through structured data analysis.
+## Data
 
----
+Three CSV files are included: [customer profiles](datasets/customer_profiles.csv), [product inventory](datasets/product_inventory.csv), and [sales transactions](datasets/sales_transaction.csv).
 
-## 🧩 Problem Statement
+This is a learning and portfolio project, rather than a deployed business system.
 
-Retail businesses often struggle with:
+## Run the analysis
 
-• Duplicate and inconsistent data
-• Incorrect product pricing
-• Lack of customer insights
-• Poor segmentation strategies
+1. Use MySQL 8 or later for window-function support.
+2. Create a fresh project database named `retail` and import the CSVs as `customer_profiles`, `product_inventory`, and `sales_transaction`.
+3. Select the `retail` database and review the scripts before running stages 1–6 in order.
 
-This project addresses these issues using SQL-driven analysis.
+The [setup script](sql/00_master_script.sql) creates the database and renames tables from the original import filenames. It does **not** run the six analysis stages. Skip its rename statements when your imported tables already use the names above.
 
----
+The cleaning and correction stages change the imported data. Keep the original CSVs and use a fresh database copy when repeating the workflow.
 
-## 🗂️ Dataset
+## Techniques demonstrated
 
-The project uses three datasets:
+Joins, aggregations, window functions, data cleaning, date transformation, and customer segmentation.
 
-• `customer_profiles` → Customer demographics
-• `product_inventory` → Product details & pricing
-• `sales_transaction` → Transaction-level data
+## Interpretation
 
----
+Use the query outputs to assess customer concentration, product performance, and seasonality. Segment definitions are project rules; repeat purchases alone do not establish a retention rate. Business recommendations require checking the actual results and the dataset's coverage.
 
-## 🏗️ Project Structure
+## Author
 
-```bash
-Retail-Analytics-SQL-Project/
-│
-├── datasets/
-│   ├── customer_profiles.csv
-│   ├── product_inventory.csv
-│   └── sales_transaction.csv
-│
-├── sql/
-│   ├── 00_master_script.sql
-│   ├── 01_data_cleaning.sql
-│   ├── 02_data_correction.sql
-│   ├── 03_data_transformation.sql
-│   ├── 04_exploratory_analysis.sql
-│   ├── 05_customer_analysis.sql
-│   └── 06_segmentation.sql
-│
-└── README.md
-```
-
----
-
-## ⚙️ Steps Performed
-
-### 🧹 Data Cleaning
-
-• Removed duplicate transaction records
-• Handled NULL, empty, and whitespace values
-
-### 🔧 Data Correction
-
-• Identified price mismatches
-• Synced transaction prices with inventory
-
-### 🔄 Data Transformation
-
-• Converted transaction dates into proper DATE format
-• Prepared data for time-based analysis
-
-### 📈 Exploratory Analysis
-
-• Product-wise and category-wise sales
-• Daily and monthly transaction trends
-• Growth analysis using window functions
-
-### 👥 Customer Analysis
-
-• Identified high-value customers
-• Analysed repeat purchase behaviour
-• Evaluated customer engagement
-
-### 🎯 Customer Segmentation
-
-• Segmented customers into Low, Medium, High
-• Based on purchase behaviour and quantity
-
----
-
-## 📌 Key Insights
-
-• A small segment of customers drives most of the revenue
-• Top-performing products significantly impact total sales
-• Repeat buyers indicate strong retention
-• Monthly trends reveal business seasonality
-
----
-
-## 🛠️ Tools & Technologies
-
-• MySQL (Workbench)
-• SQL (Joins, Aggregations, Window Functions)
-• Data Cleaning & Transformation
-
----
-
-## ▶️ How to Run
-
-1. Import datasets into MySQL Workbench
-2. Rename tables if needed
-3. Run SQL scripts in order:
-
-* [01_data_cleaning.sql](sql/01_data_cleaning.sql)
-* [02_data_correction.sql](sql/02_data_correction.sql)
-* [03_data_transformation.sql](sql/03_data_transformation.sql)
-* [04_exploratory_analysis.sql](sql/04_exploratory_analysis.sql)
-* [05_customer_analysis.sql](sql/05_customer_analysis.sql)
-* [06_segmentation.sql](sql/06_segmentation.sql)
-
----
-
-## 🚀 Why This Project Matters
-
-This project demonstrates:
-
-• Real-world problem solving using SQL
-• Strong data cleaning and transformation skills
-• Business-focused analytical thinking
-• Ability to convert raw data into actionable insights
-
----
-
-## 👤 Author
-
-Sourav Mukherjee
-Aspiring Data Analyst | SQL • Power BI • Python
-
----
-
-## ⭐ If you found this useful
-
-Give this repo a star ⭐ — it motivates me to build more!
-
----
-
-Consistent learning, one query at a time 🚀
+[Sourav Mukherjee](https://www.linkedin.com/in/mukherjeesourav687/) · Data Analytics & Technology
